@@ -1,0 +1,40 @@
+{
+  "pages": [
+    "pages/newsPage/newsPage",
+    "pages/person/person",
+    "pages/moreNews/moreNews",
+    "pages/newsItem/newsItem"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#00409A",
+    "navigationBarTitleText": "GamerFrontier",
+    "navigationBarTextStyle": "white"
+  },
+  "sitemapLocation": "sitemap.json",
+  "tabBar":{
+    "color":"#00409A",
+    "selectedColor": "#E90101",
+    "list":[
+        {
+          "pagePath":"pages/newsPage/newsPage",
+          "text":"游戏资讯",
+          "iconPath": "images/game.png",
+          "selectedIconPath": "images/game-s.png"
+        },
+        {
+          "pagePath": "pages/moreNews/moreNews",
+          "text": "更多资讯",
+          "iconPath": "images/news.png",
+          "selectedIconPath": "images/news-s.png"
+        },
+        {
+          "pagePath": "pages/person/person",
+          "text": "功能中心",
+          "iconPath": "images/person.png",
+          "selectedIconPath": "images/person-s.png"
+        }
+    ]
+  }
+}

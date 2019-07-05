@@ -1,0 +1,59 @@
+/* 轮播图 */
+.u-wrp-bnr {
+  width: 100%;
+  height: 400rpx;
+  display: block;
+  position: relative;
+  background: #f0f0f0;
+}
+.u-img-slide {
+  width: 100%;
+  height: inherit;
+}
+
+/* 最新资讯 */
+.newTitle{
+  height: 70rpx;
+  padding-left: 15rpx;
+  display: flex;
+  align-items: center;
+  border-bottom: 3px solid #ddd;
+  background-color:#eee;
+}
+.newTitle van-icon{
+  padding-top:10rpx; 
+  padding-right:5rpx;
+}
+.newTitle .newTitle-text{
+  font-weight: bold;
+  color:#00409A;
+}
+
+/* 单个新闻 */
+.news{
+  display: flex;
+  padding: 10px;
+  border-bottom:2px solid #ddd;
+}
+.news-info{
+  flex:1;
+  padding-right: 5px;
+}
+.news-title{
+  font-size: 33rpx;
+  font-weight: bold;
+  color: #333333;
+}
+.news-time,.news-re{
+  position: relative;
+  top: 20px;
+  font-size: 30rpx;
+  color: #b4b4b4;
+}
+.news-re{
+  left: 10px;
+}
+.news-img{
+  width: 300rpx;
+  height: 200rpx;
+}
