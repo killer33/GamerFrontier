@@ -1,2 +1,3 @@
 <!--pages/newsItem/newsItem.wxml-->
-<text>pages/newsItem/newsItem.wxml</text>
+<!-- <text>{{newsid}}</text> -->
+<web-view src="{{newsid}}"></web-view>

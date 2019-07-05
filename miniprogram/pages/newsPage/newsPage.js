@@ -23,9 +23,23 @@ Page({
       this.setData({
         newsList: this.data.newsList.concat(obj.BAI6RHDKwangning)
       });
-      for(var i=0;i<4;i++){
+    }).catch(err => {
+      console.log(err);
+    });
+  },
+  loadbnr:function(){
+    wx.cloud.callFunction({
+      name: "gameNews",
+      data: {
+        start: 0,
+        count: 4
+      }
+    }).then(res => {
+      var len = res.result.length;
+      var obj = JSON.parse(res.result.substring(9, len - 1));
+      for (var i = 0; i < 4; i++) {
         this.setData({
-          bnrUrl: this.data.bnrUrl.concat(this.data.newsList[i].imgsrc)
+          bnrUrl: this.data.bnrUrl.concat(obj.BAI6RHDKwangning[i].imgsrc)
         })
       }
     }).catch(err => {
@@ -44,6 +58,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    this.loadbnr();
     this.loadNews();
   },
 

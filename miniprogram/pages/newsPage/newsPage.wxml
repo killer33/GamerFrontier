@@ -12,11 +12,11 @@
   <van-icon name="eye-o" color="#00409A"/>
   <text class="newTitle-text">最新资讯</text>
 </view>
-<view class='news' wx:for="{{newsList}}" wx:key="index" bindtap='jump' data-newsid="{{item.docid}}">
-  <view class='news-info' data-newsid="{{item.docid}}">
-    <view class='news-title' data-newsid="{{item.docid}}">{{item.title}}</view>
-    <text class='news-time' data-newsid="{{item.docid}}">{{item.source}}</text>
-    <text class='news-re' data-newsid="{{item.docid}}">{{item.commentCount}}跟帖</text>
+<view class='news' wx:for="{{newsList}}" wx:key="index" bindtap='jump' data-newsid="{{item.url}}">
+  <view class='news-info' data-newsid="{{item.url}}">
+    <view class='news-title' data-newsid="{{item.url}}">{{item.title}}</view>
+    <text class='news-time' data-newsid="{{item.url}}">{{item.source}}</text>
+    <text class='news-re' data-newsid="{{item.url}}">{{item.commentCount}}跟帖</text>
   </view>
-  <image class='news-img' src="{{item.imgsrc}}" data-newsid="{{item.docid}}"></image>
+  <image class='news-img' src="{{item.imgsrc}}" data-newsid="{{item.url}}"></image>
 </view>

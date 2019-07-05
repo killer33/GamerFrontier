@@ -1,1 +1,45 @@
 /* pages/moreNews/moreNews.wxss */
+.navbar{
+  display: flex;
+  justify-content: space-between;
+}
+.navbar-item{
+  height: 50px;
+  line-height: 50px;
+  flex: 1;
+  text-align: center;
+  background-color:#00409A;
+  color: #fff; 
+  border: none;
+}
+.navbar-item.active{
+  background-color:#003580;
+}
+/* 单个新闻 */
+.news{
+  display: flex;
+  padding: 10px;
+  border-bottom:2px solid #ddd;
+}
+.news-info{
+  flex:1;
+  padding-right: 5px;
+}
+.news-title{
+  font-size: 33rpx;
+  font-weight: bold;
+  color: #333333;
+}
+.news-time,.news-re{
+  position: relative;
+  top: 20px;
+  font-size: 30rpx;
+  color: #b4b4b4;
+}
+.news-re{
+  left: 10px;
+}
+.news-img{
+  width: 300rpx;
+  height: 200rpx;
+}
