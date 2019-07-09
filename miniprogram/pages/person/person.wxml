@@ -1,2 +1,34 @@
-<!--pages/person/person.wxml-->
-<text>pages/person/person.wxml</text>
+<view class='person'>
+  <view class='person-img'>
+    <open-data type="userAvatarUrl"></open-data>
+  </view>
+  <view>
+    <open-data type="userNickName" class="person-name"></open-data>
+  </view>
+</view>
+<view class="index">
+  <!--<text>点击地名以更换城市</text>-->
+  <view class="hotcity-common" style="display:inline;">当前天气: </view>
+  <view class="thisCityName">{{location}}{{county}}</view>
+  <view class="thisCityName" bindtap="jump">
+    <icon type="download" size="18" color='#2a579a' class='changeCity'/>
+    <text>更改城市</text>  
+  </view>
+  <view class="weatherwrap" bindtap='gotoWeather'>
+    <!--显示当天的天气信息-->
+    <view class="info">
+      <!--城市名称 当前日期-->
+      <view class="city">{{location}} ({{today}})</view>
+      <!--当天温度-->
+      <view class="temp">{{weatherData.tmp}}℃</view>
+      <!--其他描述-->
+      <view class="weather">
+        <view>{{weatherData.cond_txt}}</view>
+        <view>{{weatherData.wind_dir}}</view>
+        <view>{{weatherData.wind_sc}}</view>
+        <view>PM2.5: {{air.pm25}}</view>
+        <view>{{air.qlty}}</view>
+      </view>
+    </view>
+  </view>
+</view>
