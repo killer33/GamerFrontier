@@ -10,25 +10,36 @@
   <!--<text>点击地名以更换城市</text>-->
   <view class="hotcity-common" style="display:inline;">当前天气: </view>
   <view class="thisCityName">{{location}}{{county}}</view>
-  <view class="thisCityName" bindtap="jump">
+  <view class="thisCityName" bindtap="changeCity">
     <icon type="download" size="18" color='#2a579a' class='changeCity'/>
     <text>更改城市</text>  
   </view>
-  <view class="weatherwrap" bindtap='gotoWeather'>
+  <view class="weatherwrap fuBlock">
     <!--显示当天的天气信息-->
     <view class="info">
       <!--城市名称 当前日期-->
-      <view class="city">{{location}} ({{today}})</view>
+      <view class="city">{{location}} ({{weather[0].date}}) {{weather[0].week}}</view>
       <!--当天温度-->
-      <view class="temp">{{weatherData.tmp}}℃</view>
+      <view class="temp">{{weather[0].highest}}</view>
       <!--其他描述-->
       <view class="weather">
-        <view>{{weatherData.cond_txt}}</view>
-        <view>{{weatherData.wind_dir}}</view>
-        <view>{{weatherData.wind_sc}}</view>
-        <view>PM2.5: {{air.pm25}}</view>
-        <view>{{air.qlty}}</view>
+        <view>{{weather[0].weather}}</view>
+        <view>{{weather[0].wind}}</view>
+        <view>{{weather[0].windspeed}}</view>
+        <view>PM2.5: {{weather[0].air}}</view>
+        <view> {{weather[0].air_level}}</view>
       </view>
+      <!-- 描述 -->
+      <view class='weather_tips'>小贴士：{{weather[0].tips}}</view>
     </view>
   </view>
+  <view class='moreFunction fuBlock'>
+    <view class='plus'>
+      <van-icon name="plus" size="40px"/>
+    </view>
+    <view class='moreText'>更多小功能正在添加，敬请期待~</view>
+  </view>
 </view>
+<van-popup show="{{ show }}" bind:close="onClose" position="bottom" overlay="false">
+  <van-area area-list="{{ areaList }}" bind:confirm="onConfirm" bind:cancel="onClose" />
+</van-popup>

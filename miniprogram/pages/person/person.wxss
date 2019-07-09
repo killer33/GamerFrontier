@@ -21,7 +21,7 @@
 }
 /* 天气 */
 .index {
-  min-height: 100vh;
+  min-height: 500rpx;
   font-size: 24px;
   color: white;
 }
@@ -61,16 +61,25 @@
   }
 .customSwiper swiper{height: 100%;}
 .tab{
-  height: 7orpx;position: absolute;bottom: 0;display:flex;
-  width: 100%;text-align: center;justify-content:center;
+  height: 7orpx;
+  position: absolute;
+  bottom: 0;
+  display:flex;
+  width: 100%;
+  text-align: center;
+  justify-content:center;
   align-items: center;
 }
-.tab .tab-item{ background-color: #ccc;height: 50rpx;width: 50rpx;
-line-height: 50rpx;font-size:12rpx;color:#fff;border-radius: 4px;
-margin-right:10px;}
+.tab .tab-item{
+   background-color: #ccc;
+   height: 50rpx;width: 50rpx;
+  line-height: 50rpx;font-size:12rpx;
+  color:#fff;border-radius: 4px;
+  margin-right:10px;
+}
 .tab .tab-item.selected{ background-color: #2a579a;}
 
-.weatherwrap{
+.fuBlock{
   height: 100%;
   display:flex;
   flex-direction:column;
@@ -81,7 +90,32 @@ margin-right:10px;}
   margin-top: 10rpx;
   color:  #666;
   font-size:15px;
-  background-color:#f5f5f5;
+  background-color:#ececec;
+  border-radius: 3px;
+  box-shadow: 0 0 15px #b3b3b3;
+}
+/* 更多功能 */
+.moreFunction{
+  margin-top: 40rpx;
+  height: 200rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.plus{
+  width: 50px;
+  height: 50px;
+  border:2px dashed rgb(131, 131, 131);
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+}
+.moreText{
+
+
 }
 /*当天天气信息*/
 .info{
@@ -105,22 +139,28 @@ margin-right:10px;}
   color:#2a579a;
 }
 
-/*感冒描述*/
+
 .weather{
   line-height: 22px;
-  margin: 20rpx;
-  padding: 0 10px;
+  margin: 20rpx 0;
+  padding: 0 5px;
   display: flex;
   flex-direction: row;
-  justify-content:space-around;
+  justify-content:space-between;
 }
 .life{
   line-height: 22px;
   margin: 5px 0;
   padding: 0 5px;
 }
-
 .changeCity{
  margin-right: 5rpx;
  vertical-align: bottom;
+}
+/* 小贴士 */
+.weather_tips{
+  margin-top: 40rpx;
+  padding: 0 5px;
+  font-size: 25rpx;
+  color:#00409A;
 }
